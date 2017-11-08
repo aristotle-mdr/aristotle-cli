@@ -27,8 +27,8 @@ class CheckCreds(utils.AristotleCommand):
 
 @click.command()
 @click.option('--registry', '-R', default='', help='Destination registry')
-@click.option('--user', default=None, help='API username')
-@click.option('--password', default=None, help='API password')
+@click.option('--user', prompt=True, help='API username')
+@click.option('--password', prompt=True, hide_input=True, default=None, help='API password')
 def command(registry, user, password):
     """
     Check if credentials are valid for a registry.

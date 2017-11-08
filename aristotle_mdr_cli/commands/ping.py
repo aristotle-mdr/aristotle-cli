@@ -28,7 +28,7 @@ class Ping(object):
 
 
 @click.command()
-@click.option('--registry', '-R', default='', help='Destination registry')
+@click.option('registry', '-R', default='', help='Destination registry')
 # @click.option('--user', default=None, help='API username')
 # @click.option('--password', default=None, help='API password')
 def command(registry):
